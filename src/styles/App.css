@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .container{
     width: 100vw;
     display: flex;
@@ -14,9 +17,13 @@
 }
 .list-container{
     margin-top: 30px;
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .todo-item{
-    width: 200px;
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }

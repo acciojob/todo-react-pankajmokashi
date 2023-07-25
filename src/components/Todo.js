@@ -17,21 +17,21 @@ const Todo = () => {
                     }
                 }}>Add Todo</button>
             </div>
-            <div className="list-container">
+            <ul className="list-container">
             {
                 todoList.length > 0 &&
                 todoList.map((ele) => (
-                    <div className="todo-item">
+                    <li className="todo-item">
                         <span>{ele}</span>
                         <button onClick={() => {
                             setTodoList(todoList.filter((i) => (
                                 i !== ele
                             )))
                         }}>Delete</button>
-                    </div>
+                    </li>
                 ))
             }
-            </div>
+            </ul>
         </div>
     )
 }
