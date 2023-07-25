@@ -1,4 +1,4 @@
-import {useState} from "react"
+import React, {useState} from "react"
 
 const Todo = () => {
 
@@ -9,8 +9,13 @@ const Todo = () => {
         <div className="content">
             <h3>To-Do list</h3>
             <div>
-                <input type="text" onChange={(event) => setTodo(event.target.value)}></input>
-                <button onClick={() => setTodoList([...todoList, todo])}>Add Todo</button>
+                <input type="text" onChange={(event) => setTodo(event.target.value)} value={todo}></input>
+                <button onClick={() => {
+                    if(todo){
+                        setTodoList([...todoList, todo])
+                        setTodo("")
+                    }
+                }}>Add Todo</button>
             </div>
             <div className="list-container">
             {
